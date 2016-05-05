@@ -9,64 +9,78 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Form Design <small>different form elements</small></h2>
+                    <!--                    <h2>Form Design <small>different form elements</small></h2>-->
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="./AddHodServlet">
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Full Name <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" autofocus="" required="required"  class="form-control col-md-7 col-xs-12">
+                                <input type="text" name="txtname" id="first-name" autofocus="" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Contact No <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" name="txtcont" id="last-name"  required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Landline No</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="txtlandline">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Email_Id <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="email" name="txtemail">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Password <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="password" name="txtpwd" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Security Question <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="last-name" name="txtque" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Answer</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="txtans">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Branch <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" name="txtbranch">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">From Duration <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" name="txtfrm">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">To Duration <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" name="txtto">
                             </div>
                         </div>
                         <div class="ln_solid"></div>
