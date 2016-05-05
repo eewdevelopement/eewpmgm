@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 5, 2016 4:40:48 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.main.pojo.TblGroupStudent" table="tbl_group_student" catalog="college_management_system">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="profileId" type="java.lang.Integer">
+            <column name="profile_id" />
+        </property>
+        <property name="groupId" type="java.lang.Integer">
+            <column name="group_id" />
+        </property>
+        <property name="studentName" type="string">
+            <column name="student_name" length="30" not-null="true" />
+        </property>
+        <property name="studentContact" type="string">
+            <column name="student_contact" length="30" not-null="true" />
+        </property>
+        <property name="studentEmail" type="string">
+            <column name="student_email" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
