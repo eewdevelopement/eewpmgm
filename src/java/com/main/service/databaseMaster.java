@@ -12,15 +12,17 @@ import org.hibernate.Transaction;
 public class databaseMaster {
     static Session session;
     static Transaction transaction;
-    static {
-      session=NewHibernateUtil.getSessionFactory().openSession();
-        transaction=session.beginTransaction();  
-    }
+//    static {
+//      session=NewHibernateUtil.getSessionFactory().openSession();
+//        transaction=session.beginTransaction();  
+//    }
     public static void saveEntity(Object object)
     {
-        
+        session=NewHibernateUtil.getSessionFactory().openSession();
+        transaction=session.beginTransaction(); 
         session.save(object);
         transaction.commit();
+          
     }
     public static void updateEntity(Object object)
     {

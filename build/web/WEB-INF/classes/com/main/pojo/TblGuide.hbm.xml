@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated May 5, 2016 4:40:48 AM by Hibernate Tools 3.6.0 -->
+<!-- Generated May 6, 2016 4:44:32 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.main.pojo.TblGuide" table="tbl_guide" catalog="college_management_system">
         <id name="id" type="java.lang.Integer">
@@ -38,11 +38,11 @@
         <property name="maxGroup" type="int">
             <column name="max_group" not-null="true" />
         </property>
-        <property name="fromDuration" type="date">
-            <column name="from_duration" length="10" />
+        <property name="fromDuration" type="string">
+            <column name="from_duration" length="30" />
         </property>
-        <property name="toDuration" type="date">
-            <column name="to_duration" length="10" />
+        <property name="toDuration" type="string">
+            <column name="to_duration" length="30" />
         </property>
         <property name="isActive" type="java.lang.Character">
             <column name="is_active" length="1" />

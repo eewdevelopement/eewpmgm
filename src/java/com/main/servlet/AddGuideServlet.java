@@ -6,6 +6,8 @@
 
 package com.main.servlet;
 
+import com.main.pojo.TblGuide;
+import com.main.service.databaseMaster;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AddGuideServlet", urlPatterns = {"/AddGuideServlet"})
 public class AddGuideServlet extends HttpServlet {
+   
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +39,39 @@ public class AddGuideServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-            String name = request.getParameter("full-name");
-            String contact = request.getParameter("contact-no");
-            String name = request.getParameter("full-name");
-            String name = request.getParameter("full-name");
-            String name = request.getParameter("full-name");
-            String name = request.getParameter("full-name");
-            String name = request.getParameter("full-name");
-            String name = request.getParameter("full-name");
+            TblGuide guide = new TblGuide();
             
-        } finally {
+            String name = request.getParameter("full-name");
+            guide.setFullName(name);
+            String contact = request.getParameter("contact-no");
+            guide.setContactNo(contact);
+            String landlineno = request.getParameter("land-line-no");
+            guide.setLandLineNo(landlineno);
+            String email = request.getParameter("email-id");
+            guide.setEmailId(email);
+            String password = request.getParameter("password");
+            guide.setPassword(password);
+            String securityquestion = request.getParameter("security_question");
+            guide.setSecurityQuestion(securityquestion);
+            String answer = request.getParameter("answer");
+            guide.setAnswer(answer);
+            String brancname = request.getParameter("brach_name");
+            guide.setBranchName(brancname);
+            int maxg = Integer.parseInt(request.getParameter("max_group"));
+            guide.setMaxGroup(maxg);
+            String fromduration = request.getParameter("from_duration");
+            guide.setFromDuration(fromduration);
+            String toduration = request.getParameter("to-duration");
+            guide.setToDuration(toduration);
+            databaseMaster.saveEntity(guide);
+            
+            
+        
+       }
+        catch(Exception e){
+            System.out.println("e = " + e.getMessage());
+        }
+        finally {
             out.close();
         }
     }

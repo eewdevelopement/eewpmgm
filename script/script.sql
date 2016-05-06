@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS college_management_System;
 create database college_management_System;
-use college_management_System;
+use  college_management_System;
 
 
 create table tbl_profile(
@@ -31,13 +31,13 @@ create table tbl_guide(
 `answer` varchar(30) not null,
 `branch_name` varchar(50) not null,
 `max_group` int(3) not null,
-`from_duration` date default null,
-`to_duration` date default null,
+`from_duration` varchar(30) default null,
+`to_duration` varchar(30) default null,
 `is_active` char(1) default null,
 `create_by` int(2) default null,
 `updated_by` int(2) default null,
-`create_on` date default null,
-`updated_on` date default null
+`create_on` varchar(30)default null,
+`updated_on` varchar(30) default null
 );
 
 create table tbl_hod(
