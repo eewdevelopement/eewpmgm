@@ -64,6 +64,7 @@ public class AddGuideServlet extends HttpServlet {
             String toduration = request.getParameter("to-duration");
             guide.setToDuration(toduration);
             databaseMaster.saveEntity(guide);
+            response.sendRedirect("guide/view_guide.jsp");
             
             
         

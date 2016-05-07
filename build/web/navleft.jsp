@@ -36,7 +36,7 @@
                     <a><i class="fa fa-edit"></i>MANAGE GUIDE<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="home.jsp?pageinclude=add_guide">ADD GUIDE</a></li>
-                        <li><a href="#">VIEW GUIDE</a></li>
+                        <li><a href="home.jsp?pageinclude=view_guide">VIEW GUIDE</a></li>
                     </ul>
                 </li>
                 <li>
