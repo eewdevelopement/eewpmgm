@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.main.service;
+package com.eew.service;
 
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
@@ -15,7 +15,7 @@ import org.hibernate.SessionFactory;
  *
  * @author minu
  */
-public class NewHibernateUtil {
+public class DatabaseUtil {
 
     private static final SessionFactory sessionFactory;
     

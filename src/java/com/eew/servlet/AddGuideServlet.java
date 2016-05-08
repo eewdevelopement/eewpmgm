@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.eew.servlet;
 
-package com.main.servlet;
-
-import com.main.pojo.TblGuide;
-import com.main.service.databaseMaster;
+import com.eew.pojo.TblGuide;
+import com.eew.service.DatabaseMaster;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -22,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AddGuideServlet", urlPatterns = {"/AddGuideServlet"})
 public class AddGuideServlet extends HttpServlet {
-   
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,7 +38,6 @@ public class AddGuideServlet extends HttpServlet {
         try {
             /* TODO output your page here. You may use following sample code. */
             TblGuide guide = new TblGuide();
-            
             String name = request.getParameter("full-name");
             guide.setFullName(name);
             String contact = request.getParameter("contact-no");
@@ -63,16 +60,11 @@ public class AddGuideServlet extends HttpServlet {
             guide.setFromDuration(fromduration);
             String toduration = request.getParameter("to-duration");
             guide.setToDuration(toduration);
-            databaseMaster.saveEntity(guide);
-            response.sendRedirect("guide/view_guide.jsp");
-            
-            
-        
-       }
-        catch(Exception e){
-            System.out.println("e = " + e.getMessage());
-        }
-        finally {
+            DatabaseMaster.saveEntity(guide);
+            response.sendRedirect("home.jsp?pageinclude=view_guide");
+        } catch (Exception e) {
+            response.sendRedirect("home.jsp?pageinclude=error");
+        } finally {
             out.close();
         }
     }

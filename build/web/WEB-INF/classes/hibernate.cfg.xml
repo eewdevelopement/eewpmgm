@@ -6,10 +6,10 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/college_management_System</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="com/main/pojo/TblGroupStudent.hbm.xml"/>
-    <mapping resource="com/main/pojo/TblHod.hbm.xml"/>
-    <mapping resource="com/main/pojo/TblGuide.hbm.xml"/>
-    <mapping resource="com/main/pojo/TblProjectGroup.hbm.xml"/>
-    <mapping resource="com/main/pojo/TblProfile.hbm.xml"/>
+    <mapping resource="com/eew/pojo/TblProfile.hbm.xml"/>
+    <mapping resource="com/eew/pojo/TblHod.hbm.xml"/>
+    <mapping resource="com/eew/pojo/TblGroupStudent.hbm.xml"/>
+    <mapping resource="com/eew/pojo/TblProjectGroup.hbm.xml"/>
+    <mapping resource="com/eew/pojo/TblGuide.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

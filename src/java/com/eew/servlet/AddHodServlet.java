@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.eew.servlet;
 
-package com.main.servlet;
-
-import com.main.pojo.TblHod;
-import com.main.service.databaseMaster;
+import com.eew.pojo.TblHod;
+import com.eew.service.DatabaseMaster;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -36,9 +35,8 @@ public class AddHodServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        System.out.println("out =hiiiiiiiiiiiiiiii ");
         try {
-             TblHod  hod=new TblHod();
+            TblHod hod = new TblHod();
             String name = request.getParameter("txtname");
             hod.setFullName(name);
             String cont = request.getParameter("txtcont");
@@ -59,7 +57,10 @@ public class AddHodServlet extends HttpServlet {
             hod.setFromDuration(frmdur);
             String todur = request.getParameter("txtto");
             hod.setToDuration(todur);
-            databaseMaster.saveEntity(hod);
+            DatabaseMaster.saveEntity(hod);
+            response.sendRedirect("home.jsp?pageinclude=view_hod");
+        } catch (Exception e) {
+            response.sendRedirect("home.jsp?pageinclude=error");
         } finally {
             out.close();
         }

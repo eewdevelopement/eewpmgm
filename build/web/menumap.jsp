@@ -3,6 +3,7 @@
 
     HashMap<String, String> menuMap = new HashMap<String, String>();
     menuMap.put("dashboard", "dashboard.jsp");
+    menuMap.put("error", "error.jsp");
 
     menuMap.put("add_hod", "hod/add_hod.jsp");
     menuMap.put("view_hod", "hod/view_hod.jsp");
