@@ -19,47 +19,47 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full-name">Full Name <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="full-name" required="required" class="form-control col-md-7 col-xs-12" name="full-name">
+                                <input type="text" id="full-name" required="required" class="form-control col-md-7 col-xs-12" name="full-name"  maxlength="11">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact-no">Contact No <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="contact-no" name="contact-no" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="contact-no" name="contact-no" required="required" class="form-control col-md-7 col-xs-12" maxlength="10">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="land-line-no" class="control-label col-md-3 col-sm-3 col-xs-12">Land line No</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="land-line-no" class="form-control col-md-7 col-xs-12" type="text" name="land-line-no">
+                                <input id="land-line-no" class="form-control col-md-7 col-xs-12" type="text" name="land-line-no" maxlength="11">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">E_mail Id <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="email-id" class="date-picker form-control col-md-7 col-xs-12" required="required" name="email-id"type="text">
+                                <input id="email-id" class="date-picker form-control col-md-7 col-xs-12" required="required" name="email-id"type="text" maxlength="20">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="password" id="password" required="required" name="password" class="form-control col-md-7 col-xs-12">
+                                <input type="password" id="password" required="required" name="password" class="form-control col-md-7 col-xs-12" maxlength="15">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="security-question:-">Security Question <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="security_question" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="last-name" name="security_question" required="required" class="form-control col-md-7 col-xs-12" maxlength="30">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Answer </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Answer <span class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="answer" class="form-control col-md-7 col-xs-12" type="text" name="answer">
+                                <input id="answer" class="form-control col-md-7 col-xs-12" required="required" type="text" name="answer" maxlength="30">
                             </div>
                         </div>
                         <div class="form-group">
@@ -71,7 +71,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Max Group <span class="required">*</span>
-                            </label>
+                            </label>    
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="max_group" class="date-picker form-control col-md-7 col-xs-12" required="required" name="max_group" type="text">
                             </div>
