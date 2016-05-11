@@ -1,5 +1,5 @@
 package com.eew.pojo;
-// Generated May 10, 2016 10:59:43 PM by Hibernate Tools 3.6.0
+// Generated May 11, 2016 10:15:25 PM by Hibernate Tools 3.6.0
 
 
 import java.util.HashSet;
@@ -24,10 +24,10 @@ public class TblProfile  implements java.io.Serializable {
      private String collegeTime;
      private int noOfBranches;
      private Character isActive;
-     private Set tblHods = new HashSet(0);
-     private Set tblProjectGroups = new HashSet(0);
      private Set tblGroupStudents = new HashSet(0);
+     private Set tblHods = new HashSet(0);
      private Set tblGuides = new HashSet(0);
+     private Set tblProjectGroups = new HashSet(0);
 
     public TblProfile() {
     }
@@ -45,7 +45,7 @@ public class TblProfile  implements java.io.Serializable {
         this.collegeTime = collegeTime;
         this.noOfBranches = noOfBranches;
     }
-    public TblProfile(String fullName, String contactNo, String landLineNo, String emailId, String password, String securityQuestion, String answer, String collegeName, String collegeAddress, String collegeTime, int noOfBranches, Character isActive, Set tblHods, Set tblProjectGroups, Set tblGroupStudents, Set tblGuides) {
+    public TblProfile(String fullName, String contactNo, String landLineNo, String emailId, String password, String securityQuestion, String answer, String collegeName, String collegeAddress, String collegeTime, int noOfBranches, Character isActive, Set tblGroupStudents, Set tblHods, Set tblGuides, Set tblProjectGroups) {
        this.fullName = fullName;
        this.contactNo = contactNo;
        this.landLineNo = landLineNo;
@@ -58,10 +58,10 @@ public class TblProfile  implements java.io.Serializable {
        this.collegeTime = collegeTime;
        this.noOfBranches = noOfBranches;
        this.isActive = isActive;
-       this.tblHods = tblHods;
-       this.tblProjectGroups = tblProjectGroups;
        this.tblGroupStudents = tblGroupStudents;
+       this.tblHods = tblHods;
        this.tblGuides = tblGuides;
+       this.tblProjectGroups = tblProjectGroups;
     }
    
     public Integer getId() {
@@ -155,20 +155,6 @@ public class TblProfile  implements java.io.Serializable {
     public void setIsActive(Character isActive) {
         this.isActive = isActive;
     }
-    public Set getTblHods() {
-        return this.tblHods;
-    }
-    
-    public void setTblHods(Set tblHods) {
-        this.tblHods = tblHods;
-    }
-    public Set getTblProjectGroups() {
-        return this.tblProjectGroups;
-    }
-    
-    public void setTblProjectGroups(Set tblProjectGroups) {
-        this.tblProjectGroups = tblProjectGroups;
-    }
     public Set getTblGroupStudents() {
         return this.tblGroupStudents;
     }
@@ -176,12 +162,26 @@ public class TblProfile  implements java.io.Serializable {
     public void setTblGroupStudents(Set tblGroupStudents) {
         this.tblGroupStudents = tblGroupStudents;
     }
+    public Set getTblHods() {
+        return this.tblHods;
+    }
+    
+    public void setTblHods(Set tblHods) {
+        this.tblHods = tblHods;
+    }
     public Set getTblGuides() {
         return this.tblGuides;
     }
     
     public void setTblGuides(Set tblGuides) {
         this.tblGuides = tblGuides;
+    }
+    public Set getTblProjectGroups() {
+        return this.tblProjectGroups;
+    }
+    
+    public void setTblProjectGroups(Set tblProjectGroups) {
+        this.tblProjectGroups = tblProjectGroups;
     }
 
 

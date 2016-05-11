@@ -1,8 +1,12 @@
+<%@page import="com.eew.service.DatabaseMaster"%>
+<%@page import="java.util.List"%>
+<%@page import="com.eew.pojo.TblGuide"%>
+<!-- page content -->
 <div class="">
     <div class="page-title">
         <div class="title_left">
             <h3>
-                Users
+                Tables
                 <small>
                     Some examples to get you started
                 </small>
@@ -20,64 +24,62 @@
             </div>
         </div>
     </div>
+
     <div class="clearfix"></div>
 
     <div class="row">
-
+        <div class="clearfix"></div>
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Default Example <small>Users</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                    </ul>
+                    <h2>Table design <small>Custom design</small></h2>
                     <div class="clearfix"></div>
                 </div>
+
                 <div class="x_content">
-                    <table id="datatable" class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- ADD FOR LOOP HERE -->
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                            </tr>
-                            <!-- DONE WITH FOR LOOP HERE -->
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped jambo_table bulk_action">
+                            <thead>
+                                <tr class="headings">
+                                    <th><input type="checkbox" id="check-all" class="flat"></th>
+                                    <th  class="column-title">Full Name</th>
+                                    <th  class="column-title">Contact No</th>
+                                    <th  class="column-title">Email_Id</th>
+                                    <th  class="column-title">Password</th>
+                                    <th  class="column-title">Brach Name</th>
+                                    <th  class="column-title">Max Group</th>
+                                    <th  class="column-title">From</th>
+                                    <th  class="column-title">To</th>
+                                    <th class="column-title no-link last"><span class="nobr">Action</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+                                    List<TblGuide> list = DatabaseMaster.listEntity(new TblGuide());
+                                    for (TblGuide guide : list) {
+                                %>
+                                <tr class="even pointer">
+                                    <td class="a-center "><input type="checkbox" class="flat" name="table_records"></td>
+                                    <td> <%= guide.getFullName()%></td>
+                                    <td><%=guide.getContactNo()%></td>
+                                    <td><%=guide.getEmailId()%></td>
+                                    <td><%=guide.getPassword()%></td>
+                                    <td><%=guide.getBranchName()%></td>
+                                    <td><%=guide.getMaxGroup()%></td>
+                                    <td><%=guide.getFromDuration()%></td>
+                                    <td><%=guide.getToDuration()%></td>
+                                    <td class=" last">
+                                        <a href="#">View</a>
+                                        &nbsp;|&nbsp;
+                                        <a href="#">Edit</a>
+                                        &nbsp;|&nbsp;
+                                        <a href="#">Delete</a>
+                                    </td>
+                                </tr>
+                                <% }%>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

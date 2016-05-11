@@ -1,5 +1,5 @@
 package com.eew.pojo;
-// Generated May 10, 2016 10:59:43 PM by Hibernate Tools 3.6.0
+// Generated May 11, 2016 10:15:25 PM by Hibernate Tools 3.6.0
 
 
 

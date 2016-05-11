@@ -60,7 +60,9 @@ public class AddGuideServlet extends HttpServlet {
             guide.setFromDuration(fromduration);
             String toduration = request.getParameter("to-duration");
             guide.setToDuration(toduration);
+            System.out.println("****************************** PRE SAVE ********************************");
             DatabaseMaster.saveEntity(guide);
+            System.out.println("****************************** POSY SAVE ********************************");
             response.sendRedirect("home.jsp?pageinclude=view_guide");
         } catch (Exception e) {
             response.sendRedirect("home.jsp?pageinclude=error");

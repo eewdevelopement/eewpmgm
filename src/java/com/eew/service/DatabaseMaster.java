@@ -25,7 +25,6 @@ public class DatabaseMaster {
         transaction = session.beginTransaction();
         session.save(object);
         transaction.commit();
-
     }
 
     public static void updateEntity(Object object) {
