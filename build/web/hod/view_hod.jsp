@@ -1,6 +1,6 @@
 <%@page import="com.eew.service.DatabaseMaster"%>
 <%@page import="java.util.List"%>
-<%@page import="com.main.pojo.TblHod"%>
+<%@page import="com.eew.pojo.TblHod"%>
 <div class="">
     <div class="page-title">
         <div class="title_left">
