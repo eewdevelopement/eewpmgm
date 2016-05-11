@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 12:28:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.eew.pojo.TblProjectGroup" table="tbl_project_group" catalog="college_management_system" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblProfile" class="com.eew.pojo.TblProfile" fetch="select">
+            <column name="profile_id" not-null="true" />
+        </many-to-one>
+        <property name="groupCode" type="string">
+            <column name="group_code" length="20" not-null="true" />
+        </property>
+        <property name="brachName" type="string">
+            <column name="brach_name" length="30" not-null="true" />
+        </property>
+        <property name="groupPStudent" type="java.lang.Integer">
+            <column name="groupP_student" />
+        </property>
+        <property name="projectTitle" type="string">
+            <column name="project_title" length="20" not-null="true" />
+        </property>
+        <property name="projectDomain" type="string">
+            <column name="project_domain" length="20" not-null="true" />
+        </property>
+        <property name="groupUsername" type="string">
+            <column name="`group username`" length="30" not-null="true" />
+        </property>
+        <property name="groupPassword" type="string">
+            <column name="`group password`" length="30" not-null="true" />
+        </property>
+        <property name="projectLanguage" type="string">
+            <column name="project_language" length="20" not-null="true" />
+        </property>
+        <property name="isActive" type="java.lang.Character">
+            <column name="is_active" length="1" />
+        </property>
+        <property name="createBy" type="java.lang.Integer">
+            <column name="create_by" />
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by" />
+        </property>
+        <property name="createOn" type="date">
+            <column name="create_on" length="10" />
+        </property>
+        <property name="updatedOn" type="date">
+            <column name="updated_on" length="10" />
+        </property>
+        <set name="tblGroupStudents" table="tbl_group_student" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="group_id" />
+            </key>
+            <one-to-many class="com.eew.pojo.TblGroupStudent" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2016 12:28:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.eew.pojo.TblProfile" table="tbl_profile" catalog="college_management_system" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="fullName" type="string">
+            <column name="full_name" length="30" not-null="true" />
+        </property>
+        <property name="contactNo" type="string">
+            <column name="contact_no" length="30" not-null="true" />
+        </property>
+        <property name="landLineNo" type="string">
+            <column name="land_line_no" length="30" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="email_id" length="30" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="30" not-null="true" />
+        </property>
+        <property name="securityQuestion" type="string">
+            <column name="security_question" length="100" not-null="true" />
+        </property>
+        <property name="answer" type="string">
+            <column name="answer" length="30" not-null="true" />
+        </property>
+        <property name="collegeName" type="string">
+            <column name="college_name" length="50" not-null="true" />
+        </property>
+        <property name="collegeAddress" type="string">
+            <column name="college_address" length="300" not-null="true" />
+        </property>
+        <property name="collegeTime" type="string">
+            <column name="college_time" length="20" not-null="true" />
+        </property>
+        <property name="noOfBranches" type="int">
+            <column name="no_of_branches" not-null="true" />
+        </property>
+        <property name="isActive" type="java.lang.Character">
+            <column name="is_active" length="1" />
+        </property>
+        <set name="tblGroupStudents" table="tbl_group_student" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="profile_id" />
+            </key>
+            <one-to-many class="com.eew.pojo.TblGroupStudent" />
+        </set>
+        <set name="tblHods" table="tbl_hod" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="profile_id" />
+            </key>
+            <one-to-many class="com.eew.pojo.TblHod" />
+        </set>
+        <set name="tblGuides" table="tbl_guide" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="profile_id" />
+            </key>
+            <one-to-many class="com.eew.pojo.TblGuide" />
+        </set>
+        <set name="tblProjectGroups" table="tbl_project_group" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="profile_id" not-null="true" />
+            </key>
+            <one-to-many class="com.eew.pojo.TblProjectGroup" />
+        </set>
+    </class>
+</hibernate-mapping>
