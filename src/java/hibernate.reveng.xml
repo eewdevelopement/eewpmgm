@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="college_management_System"/>
-  <table-filter match-name="tbl_project_group"/>
   <table-filter match-name="tbl_profile"/>
-  <table-filter match-name="tbl_hod"/>
   <table-filter match-name="tbl_group_student"/>
+  <table-filter match-name="tbl_project_group"/>
   <table-filter match-name="tbl_guide"/>
+  <table-filter match-name="tbl_hod"/>
 </hibernate-reverse-engineering>

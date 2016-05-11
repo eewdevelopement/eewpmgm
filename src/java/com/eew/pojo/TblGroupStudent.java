@@ -1,5 +1,5 @@
 package com.eew.pojo;
-// Generated May 11, 2016 12:28:35 PM by Hibernate Tools 4.3.1
+// Generated May 10, 2016 10:59:43 PM by Hibernate Tools 3.6.0
 
 
 
@@ -10,8 +10,8 @@ public class TblGroupStudent  implements java.io.Serializable {
 
 
      private Integer id;
-     private TblProfile tblProfile;
      private TblProjectGroup tblProjectGroup;
+     private TblProfile tblProfile;
      private String studentName;
      private String studentContact;
      private String studentEmail;
@@ -25,9 +25,9 @@ public class TblGroupStudent  implements java.io.Serializable {
         this.studentContact = studentContact;
         this.studentEmail = studentEmail;
     }
-    public TblGroupStudent(TblProfile tblProfile, TblProjectGroup tblProjectGroup, String studentName, String studentContact, String studentEmail) {
-       this.tblProfile = tblProfile;
+    public TblGroupStudent(TblProjectGroup tblProjectGroup, TblProfile tblProfile, String studentName, String studentContact, String studentEmail) {
        this.tblProjectGroup = tblProjectGroup;
+       this.tblProfile = tblProfile;
        this.studentName = studentName;
        this.studentContact = studentContact;
        this.studentEmail = studentEmail;
@@ -40,19 +40,19 @@ public class TblGroupStudent  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-    public TblProfile getTblProfile() {
-        return this.tblProfile;
-    }
-    
-    public void setTblProfile(TblProfile tblProfile) {
-        this.tblProfile = tblProfile;
-    }
     public TblProjectGroup getTblProjectGroup() {
         return this.tblProjectGroup;
     }
     
     public void setTblProjectGroup(TblProjectGroup tblProjectGroup) {
         this.tblProjectGroup = tblProjectGroup;
+    }
+    public TblProfile getTblProfile() {
+        return this.tblProfile;
+    }
+    
+    public void setTblProfile(TblProfile tblProfile) {
+        this.tblProfile = tblProfile;
     }
     public String getStudentName() {
         return this.studentName;
