@@ -1,3 +1,4 @@
+<%@page import="com.eew.pojo.TblProjectGroup"%>
 <%@page import="com.eew.service.DatabaseMaster"%>
 <%@page import="java.util.List"%>
 <%@page import="com.eew.pojo.TblGuide"%>
@@ -42,32 +43,32 @@
                             <thead>
                                 <tr class="headings">
                                     <th><input type="checkbox" id="check-all" class="flat"></th>
-                                    <th  class="column-title">Full Name</th>
-                                    <th  class="column-title">Contact No</th>
-                                    <th  class="column-title">Email_Id</th>
-                                    <th  class="column-title">Password</th>
+                                    <th  class="column-title">Group Code</th>
                                     <th  class="column-title">Brach Name</th>
-                                    <th  class="column-title">Max Group</th>
-                                    <th  class="column-title">From</th>
-                                    <th  class="column-title">To</th>
+                                    <th  class="column-title">Group Student</th>
+                                    <th  class="column-title">Project Title</th>
+                                    <th  class="column-title">Project Domain</th>
+                                    <th  class="column-title">Group Username</th>
+                                    <th  class="column-title">Group Password</th>
+                                    <th  class="column-title">Project Language</th>
                                     <th class="column-title no-link last"><span class="nobr">Action</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <%
-                                    List<TblGuide> list = DatabaseMaster.listEntity(new TblGuide());
-                                    for (TblGuide guide : list) {
+                                    List<TblProjectGroup> list = DatabaseMaster.listEntity(new TblProjectGroup());
+                                    for (TblProjectGroup projectGroup : list) {
                                 %>
                                 <tr class="even pointer">
                                     <td class="a-center "><input type="checkbox" class="flat" name="table_records"></td>
-                                    <td> <%= guide.getFullName()%></td>
-                                    <td><%=guide.getContactNo()%></td>
-                                    <td><%=guide.getEmailId()%></td>
-                                    <td><%=guide.getPassword()%></td>
-                                    <td><%=guide.getBranchName()%></td>
-                                    <td><%=guide.getMaxGroup()%></td>
-                                    <td><%=guide.getFromDuration()%></td>
-                                    <td><%=guide.getToDuration()%></td>
+                                    <td> <%= projectGroup.getGroupCode()%></td>
+                                    <td><%=projectGroup.getBrachName()%></td>
+                                    <td><%=projectGroup.getGroupPStudent()%></td>
+                                    <td><%=projectGroup.getProjectTitle()%></td>
+                                    <td><%=projectGroup.getProjectDomain()%></td>
+                                    <td><%=projectGroup.getGroupUsername()%></td>
+                                    <td><%=projectGroup.getGroupPassword()%></td>
+                                    <td><%=projectGroup.getProjectLanguage()%></td>
                                     <td class=" last">
                                         <a href="#">View</a>
                                         &nbsp;|&nbsp;

@@ -43,7 +43,7 @@
                     <a><i class="fa fa-edit"></i>MANAGE GROUP<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="home.jsp?pageinclude=add_projectgroup">ADD GROUP</a></li>
-                        <li><a href="#">VIEW GROUP</a></li>
+                        <li><a href="home.jsp?pageinclude=view_projectgroup">VIEW GROUP</a></li>
                     </ul>
                 </li>
                 <li>

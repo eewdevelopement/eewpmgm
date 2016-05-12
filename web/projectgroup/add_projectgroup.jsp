@@ -1,107 +1,86 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Manage Guide</h3>
+            <h3>Manage Project Group</h3>
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="clearfix"></div>
-    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="./AddGuideServlet" >
+    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="./AddProjectgroupServlet" >
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>GUIDE</h2>
+                        <h2>PROJECT GROUP</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
                         <br />
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full-name">Full Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="group_code">Group Code <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="full-name" required="required" class="form-control col-md-7 col-xs-12" name="full-name"  maxlength="11">
+                                <input type="text" id="group_code" required="required" class="form-control col-md-7 col-xs-12" name="group_code"  maxlength="11">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact-no">Contact No <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="brach_name">Brach Name <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="contact-no" name="contact-no" required="required" class="form-control col-md-7 col-xs-12" maxlength="10">
+                                <input type="text" id="brach_name" name="brach_name" required="required" class="form-control col-md-7 col-xs-12" maxlength="10">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="land-line-no" class="control-label col-md-3 col-sm-3 col-xs-12">Land line No</label>
+                            <label for="groupP_student" class="control-label col-md-3 col-sm-3 col-xs-12">Group Student</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="land-line-no" class="form-control col-md-7 col-xs-12" type="text" name="land-line-no" maxlength="11">
+                                <input id="groupP_student" class="form-control col-md-7 col-xs-12" type="number" name="groupP_student" maxlength="15">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">E_mail Id <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Project Title <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="email-id" class="date-picker form-control col-md-7 col-xs-12" required="required" name="email-id"type="text" maxlength="20">
+                                <input id="project_title" class="date-picker form-control col-md-7 col-xs-12" required="required" name="project_title" type="text" maxlength="20">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="project_domain">Project Domain <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="password" id="password" required="required" name="password" class="form-control col-md-7 col-xs-12" maxlength="15">
+                                <input type="text" id="project_domain" required="required" name="project_domain" class="form-control col-md-7 col-xs-12" maxlength="15">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="security-question:-">Security Question <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="group username">Group Username <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="security_question" required="required" class="form-control col-md-7 col-xs-12" maxlength="30">
+                                <input type="text" id="group_username" name="group username" required="required" class="form-control col-md-7 col-xs-12"  maxlength="5">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Answer <span class="required">*</span></label>
+                            <label for="group password" class="control-label col-md-3 col-sm-3 col-xs-12">Group Password <span class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="answer" class="form-control col-md-7 col-xs-12" required="required" type="text" name="answer" maxlength="30">
+                                <input id="group password" class="form-control col-md-7 col-xs-12" required="required" type="password" name="group password" maxlength="30">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Brach Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Project Language <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="brach_name" class="date-picker form-control col-md-7 col-xs-12" required="required" name="brach_name" type="text">
+                                <input id="project_language" class="date-picker form-control col-md-7 col-xs-12" required="required" name="project_language" maxlength="30" type="text" >
                             </div>
                         </div>
+
+                        <div class="clearfix"></div>
+                        <div class="ln_solid"></div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Max Group <span class="required">*</span>
-                            </label>    
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="max_group" class="date-picker form-control col-md-7 col-xs-12" required="required" name="max_group" type="text">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-primary">Cancel</button>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">From Duration <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="from_duration" class="date-picker form-control col-md-7 col-xs-12" required="required" name="from_duration" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">To Duration <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="to-duration" class="date-picker form-control col-md-7 col-xs-12" required="required" name="to-duration" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                            <button type="submit" class="btn btn-primary">Cancel</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </form>
 </div>
